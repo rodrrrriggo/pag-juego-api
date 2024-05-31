@@ -1,0 +1,55 @@
+
+body{
+    background-color: rgb(49, 49, 49);
+}
+
+img{
+    width: 8rem;
+    height: 3rem;
+}
+
+
+.carousel-item img{
+    margin: 0px;
+    width: 20rem;
+    height: 37rem;
+    object-fit: cover;
+}
+
+.container-propio{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+
+.body-bg{
+    background-image: url(/ASSETS/IMG/fondo3.png);
+    background-size: cover;
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+  /* Estilos adicionales para la barra de navegación */
+  .navbar {
+    background-color: #f8f9fa; /* Cambia el color de fondo */
+    border-radius: 10px; /* Añade bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añade sombra */
+  }
+
+  .navbar-brand {
+    font-weight: bold; /* Hace el texto del logo en negrita */
+    color: #333; /* Cambia el color del texto del logo */
+  }
+
+  .navbar-nav .nav-link {
+    color: #333; /* Cambia el color del texto de los enlaces */
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #007bff; /* Cambia el color del texto del enlace al pasar el mouse */
+  }

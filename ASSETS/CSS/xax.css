@@ -1,0 +1,65 @@
+.carddd {
+            
+    float: inline-end;
+    width: 200px;
+}
+
+.body-bg{
+    background-image: url(/ASSETS/IMG/fondo.jpg);
+    background-size: cover;
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.card-text{
+color: rgb(255,193,7,255);
+}
+
+.list-group-item{
+background-color: rgb(255,193,7,255);
+}
+
+
+
+  /* Estilos adicionales para la barra de navegación */
+  .navbar {
+    background-color: #f8f9fa; /* Cambia el color de fondo */
+    border-radius: 10px; /* Añade bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añade sombra */
+  }
+
+  .navbar-brand {
+    font-weight: bold; /* Hace el texto del logo en negrita */
+    color: #333; /* Cambia el color del texto del logo */
+  }
+
+  .navbar-nav .nav-link {
+    color: #333; /* Cambia el color del texto de los enlaces */
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #007bff; /* Cambia el color del texto del enlace al pasar el mouse */
+  }
+
+  .card-link{
+    color: darkkhaki;
+    
+  }
+
+  .btnbutton{
+    background-color: rgb(198, 174, 69);
+    padding: 15px 20px;
+    margin-top: 20px;
+    border-radius: .3rem;
+    color: rgb(50, 0, 0);
+    font-weight: 600;
+    
+}
+.btnbutton:hover{
+    cursor: pointer;
+    background-color: rgb(255, 248, 47);
+    color: white;
+    transition: .3s ease-in;
+    
+}
