@@ -9,18 +9,14 @@ document.getElementById('login').addEventListener('submit', async function(event
     try {
         const usuarios = await getUsuarios();
 
-        let validUser = usuarios.find(user => user.usuario === username && user.contraseña === password);
+        let validUser = usuarios.find(user => user.nombre === username && user.contraseña === password);
         if (validUser) {
-
             localStorage.setItem('loggedIn', true);
-            window.location.href = 'index.html';
+            window.location.href = 'INDEX.HTML';
         } else {
-
             document.getElementById('loginMessage').textContent = 'Nombre de usuario y/o contraseña incorrectos. Inténtelo de nuevo.';
         }
     } catch (error) {
-
         document.getElementById('loginMessage').textContent = 'Ocurrió un error. Inténtelo de nuevo más tarde.';
     }
-    
 });
