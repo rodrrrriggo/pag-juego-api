@@ -4,6 +4,9 @@ body{
 }
 
 
+img{
+  height: 20rem;
+}
 
 .carousel-item img{
     margin: 0px;
@@ -17,9 +20,7 @@ body{
     margin: 0 auto;
 }
 
-.container{
-    margin-left: 20px;
-}
+
 
 
 .body-bg{
