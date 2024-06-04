@@ -45,6 +45,16 @@ const eliminarDelCarrito = (id) => {
   actualizarCarrito();
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const comprarButton = document.querySelector('.modal-footer .btn-primary');
+  comprarButton.addEventListener('click', () => {
+    alert('¡Gracias por comprar, disfruta tus videojuegos!');
+    carrito = [];
+    actualizarCarrito();
+  });
+});
+
+
 const enviarDatos = (id, imagen, nombre, precio, desarrollador) => {
   const archivoHTML = "./JUEGOS.HTML";
 
