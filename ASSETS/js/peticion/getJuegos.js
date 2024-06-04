@@ -1,3 +1,6 @@
+//API PARA LOS JUEGOS
+//18 JUEGOS EN TOTAL
+
 export const getJuegos = async () =>  {
     try{
 

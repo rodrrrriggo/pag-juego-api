@@ -1,3 +1,4 @@
+//JS PARA PODER HACER FUNCIONAL EL INICIO DE SESION DE USUSARIOS DE GETUSUARIOS.JS
 import { getUsuarios } from './peticion/getUsuarios.js';
 
 document.getElementById('login').addEventListener('submit', async function(event) {

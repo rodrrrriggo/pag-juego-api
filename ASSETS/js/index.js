@@ -1,6 +1,15 @@
 import { getJuegos } from "./peticion/getJuegos.js";
-
+//CARRITO DONDE CONTIENE SU FUNCION MAS SU LOCAL STORAGE
 let carrito = [];
+
+const guardarCarritoEnLocalStorage = () => {
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+const leerCarritoDeLocalStorage = () => {
+  const carritoGuardado = localStorage.getItem('carrito');
+  return carritoGuardado ? JSON.parse(carritoGuardado) : [];
+}
 
 const agregarAlCarrito = (juego) => {
   const existe = carrito.find(item => item.id === juego.id);
@@ -10,6 +19,7 @@ const agregarAlCarrito = (juego) => {
     carrito.push({ ...juego, cantidad: 1 });
   }
   actualizarCarrito();
+  guardarCarritoEnLocalStorage();
 }
 
 const actualizarCarrito = () => {
@@ -37,24 +47,30 @@ const actualizarCarrito = () => {
     total += item.precio * item.cantidad;
   });
 
-  totalCarrito.textContent = total.toFixed(2);
+  totalCarrito.textContent = total.toFixed(3);
 }
 
 const eliminarDelCarrito = (id) => {
   carrito = carrito.filter(item => item.id !== id);
   actualizarCarrito();
+  guardarCarritoEnLocalStorage();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  carrito = leerCarritoDeLocalStorage();
+  actualizarCarrito();
+
   const comprarButton = document.querySelector('.modal-footer .btn-primary');
   comprarButton.addEventListener('click', () => {
-    alert('¡Gracias por comprar, disfruta tus videojuegos!');
+    alert('¡Gracias por comprar en MEGAGAMES!');
     carrito = [];
     actualizarCarrito();
+    guardarCarritoEnLocalStorage();
   });
 });
 
 
+//FUNCIONES PARA LAS CARDS Y SE PUEDAN ACOPLAR A LA API
 const enviarDatos = (id, imagen, nombre, precio, desarrollador) => {
   const archivoHTML = "./JUEGOS.HTML";
 

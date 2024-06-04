@@ -1,3 +1,8 @@
+//EN ESTA API HAY 3 USUARIOS PREDEFINIDOS PARA PODER INICIAR SESION EN LA PAGINA
+//rodrigo guzman rodri123
+//nicolas caceres nico1234
+//esteban martinez teban1234
+
 export async function getUsuarios() {
     try {
         const response = await fetch('https://proyecto-api-usuarios.onrender.com/');
